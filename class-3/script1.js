@@ -1,8 +1,8 @@
 // 1
 let car = {
-    brand: 'Toyota',
-    value: 50000,
-    power: 150,
+    brand: 'Seat Ibiza',
+    value: 5000,
+    power: 105,
     increasePower: function(power) {
         this.power += power;
     }
