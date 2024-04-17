@@ -43,16 +43,16 @@ class PersonNew {
     greet() {
         console.log(`I am ${this.name}, I am ${this.age} years old`);
     }
-    setName(name) {
+    set setName(name) {
         this.name = this.formatName(name);
     }
-    setAge(age) {
+    set setAge(age) {
         this.age = this.formatAge(age);
     }
-    getName() {
+    get getName() {
         return this.name;
     }
-    getAge() {
+    get getAge() {
         return this.age;
     }
     formatName(name) {
@@ -61,20 +61,19 @@ class PersonNew {
     formatAge(age) {
         try {
             if (age < 0) {
-                console.error('Age cannot be negative');
-                return this.age;
+                throw new RangeError('Age cannot be negative');
             }
             return age;
         } catch (error) {
-            console.error(error);
+            throw new TypeError('Age must be a number' + error.message);
         }
     }
 }
 // 3.2 + 4.2 + 4.3
 personNew = new PersonNew('maria', 65);
 personNew.greet();
-personNew.setAge(-1);
-personNew.setName('KASIA');
-console.log(personNew.getAge());
-console.log(personNew.getName());
+personNew.setAge = -1;
+personNew.setName = 'john';
+console.log(personNew.getAge);
+console.log(personNew.getName);
 personNew.greet();
