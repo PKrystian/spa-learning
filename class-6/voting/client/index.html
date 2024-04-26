@@ -3,7 +3,7 @@
 <head>
     <title>WebSocket OnLine Voting System</title>
     <script>
-        var socket = new WebSocket('ws://localhost:3000');
+        var socket = new WebSocket('ws://localhost:3000/voting');
         socket.onmessage = onMessage;
 
         function onMessage(event) {
