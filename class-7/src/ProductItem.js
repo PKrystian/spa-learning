@@ -1,8 +1,10 @@
-function ProductItem({key, brand, title}) {
+import { Link } from "react-router-dom";
+
+function ProductItem({id, title, brand}) {
   return (
-    <li key={key}>
-      {title} ({brand})
-    </li>
+      <li key={id}>
+        <Link to={`details/${id}`}>{title}</Link> ({brand})
+      </li>
   );
 }
 
