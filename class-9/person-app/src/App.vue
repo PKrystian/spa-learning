@@ -1,12 +1,12 @@
 <script setup>
-import Person from './components/Person.vue';
-import PersonOptionsAPI from "@/components/PersonOptionsAPI.vue";
+  import PersonList from './components/PersonList.vue'
+  import PersonListOptions from './components/PersonListOptions.vue'
 </script>
 
 <template>
   <main>
-    <Person />
-    <PersonOptionsAPI />
+    <PersonList />
+    <PersonListOptions />
   </main>
 </template>
 
@@ -15,20 +15,11 @@ header {
   line-height: 1.5;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
 @media (min-width: 1024px) {
   header {
     display: flex;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
   }
 
   header .wrapper {
